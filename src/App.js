@@ -8,11 +8,12 @@ const App = props => {
             { name: 'Max', age: 28 },
             { name: 'Manu', age: 29 },
             { name: 'Stephanie', age: 26 },
-        ],
-        otherState: 'some other value'
+        ]
     });
 
-    console.log(personsState);
+    const [ otherState, setOtherState ] = useState('some other value');
+
+    console.log(personsState, otherState);
 
     const switchNameHandler = () => {
         setPersonsState({
@@ -20,8 +21,7 @@ const App = props => {
                 { name: "Maximilian", age: 28 },
                 { name: "Manu", age: 29 },
                 { name: "Stephanie", age: 27 },
-            ],
-            otherState: personsState.otherState // hooks replace the whole state instead of comparing, so we must re-initialize this value
+            ]
         });
     };
 

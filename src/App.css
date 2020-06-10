@@ -28,12 +28,12 @@
     border: 1px solid black;
 }
 
-h1 {
-    font-size: 20px;
+.Char:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
 }
 
-textarea {
-    width: 25%;
-    height: 30px;
-    font-size: 16px;
+h1 {
+    font-size: 20px;
 }

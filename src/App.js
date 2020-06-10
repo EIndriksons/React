@@ -3,7 +3,7 @@ import './App.css';
 
 class App extends Component {
     state = {
-        text: ''
+        text: '',
     }
 
     changeListener = (event) => {
@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
         <div className="App">
-            <p>Please enter the text:</p>
+            <h1>Please enter the text:</h1>
             <textarea onChange={this.changeListener}></textarea>
             <p>{this.state.text}</p>
         </div>

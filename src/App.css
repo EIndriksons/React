@@ -1,4 +1,15 @@
 .App {
     margin: 16px;
     text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+textarea {
+    width: 40%;
+    height: 100px;
+    font-size: 16px;
 }

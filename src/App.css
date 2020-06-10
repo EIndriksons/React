@@ -4,6 +4,22 @@
     font-family: sans-serif;
 }
 
+.ValidationComponent {
+    width: 10%;
+    margin: 16px auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+}
+
+.valid {
+    background-color: #98FB98;
+}
+
+.invalid {
+    background-color: #FA8072;
+}
+
 h1 {
     font-size: 20px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ValidationComponent from './ValidationComponent/ValidationComponent';
+import Validation from './Validation/Validation';
+import Char from './Char/Char';
 
 class App extends Component {
     state = {
@@ -12,12 +13,21 @@ class App extends Component {
     }
 
     render() {
+        let chars = (
+            <div>
+                {this.state.text.split('').map((char, index) => {
+                    return <Char char={char} key={index} />
+                })}
+            </div>
+        )
+
         return (
         <div className="App">
             <h1>Please enter the text:</h1>
             <textarea onChange={this.changeListener}></textarea>
             <p>Length of the text: {this.state.text.length}</p>
-            <ValidationComponent length={this.state.text.length} />
+            <Validation length={this.state.text.length} />
+            {chars}
         </div>
         );
     }

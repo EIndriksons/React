@@ -20,12 +20,20 @@
     background-color: #FA8072;
 }
 
+.Char {
+    display: inline-block;
+    padding: 16px;
+    text-align: center;
+    margin: 16px;
+    border: 1px solid black;
+}
+
 h1 {
     font-size: 20px;
 }
 
 textarea {
-    width: 40%;
-    height: 100px;
+    width: 25%;
+    height: 30px;
     font-size: 16px;
 }

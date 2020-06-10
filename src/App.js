@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+    state = {
+        text: ''
+    }
+
+    changeListener = (event) => {
+        this.setState({text: event.target.value})
+    }
+
     render() {
         return (
         <div className="App">
-            
+            <p>Please enter the text:</p>
+            <textarea onChange={this.changeListener}></textarea>
+            <p>{this.state.text}</p>
         </div>
         );
     }

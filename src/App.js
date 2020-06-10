@@ -15,7 +15,7 @@ class App extends Component {
         <div className="App">
             <h1>Please enter the text:</h1>
             <textarea onChange={this.changeListener}></textarea>
-            <p>{this.state.text}</p>
+            <p>Length of the text: {this.state.text.length}</p>
         </div>
         );
     }

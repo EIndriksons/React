@@ -2,7 +2,7 @@ import React from 'react';
 
 const Char = (props) => {
     return (
-        <p className="Char">{props.char}</p>
+        <p className="Char" onClick={props.delete}>{props.char}</p>
     )
 }
 

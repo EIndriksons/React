@@ -12,11 +12,21 @@ class App extends Component {
         this.setState({text: event.target.value})
     }
 
+    deleteChar = (index) => {
+        const text = this.state.text.split('');
+        text.splice(index, 1);
+        const updatedText = text.join('');
+        this.setState({text: updatedText})
+    }
+
     render() {
         let chars = (
             <div>
                 {this.state.text.split('').map((char, index) => {
-                    return <Char char={char} key={index} />
+                    return <Char
+                        char={char}
+                        delete={() => this.deleteChar(index)}
+                        key={index} />
                 })}
             </div>
         )
@@ -24,7 +34,7 @@ class App extends Component {
         return (
         <div className="App">
             <h1>Please enter the text:</h1>
-            <textarea onChange={this.changeListener}></textarea>
+            <input type="text" onChange={this.changeListener} value={this.state.text} />
             <p>Length of the text: {this.state.text.length}</p>
             <Validation length={this.state.text.length} />
             {chars}

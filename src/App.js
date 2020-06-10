@@ -24,7 +24,8 @@ class App extends Component {
     }
 
     deletePersonHandler = (personIndex) => {
-        const persons = this.state.persons;
+        const persons = [...this.state.persons]; // use this to generate new array instead of getting a pointer
+                                                 // best practice is to generate actual copy, change it and then update state
         persons.splice(personIndex, 1);
         this.setState({persons: persons})
     }

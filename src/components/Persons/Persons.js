@@ -14,7 +14,16 @@ class Persons extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log('[Persons.js] shouldComponentUpdate');
-        return true;
+        // make sure you're checking the right contents
+        // in this case we check if the pointers are the same
+        // but because when we execute a Persons change, we create a new
+        // object with a different pointer - it works
+        // this is a shallow comparison
+        if (nextProps.persons !== this.props.persons) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {

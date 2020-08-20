@@ -18,7 +18,7 @@ const sideDrawer = (props) => {
                 <div className={classes.Logo}>
                     <Logo />
                 </div>
-                <nav className={classes.DesktopOnly}>
+                <nav>
                     <NavigationItems />
                 </nav>
             </div>

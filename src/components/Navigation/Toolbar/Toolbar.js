@@ -13,7 +13,7 @@ const toolbar = (props) => (
                 // height="80%"
                 />
         </div>
-        <nav>
+        <nav className={classes.DesktopOnly}>
             <NavigationItems />
         </nav>
     </header>
